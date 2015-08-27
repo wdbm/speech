@@ -29,7 +29,7 @@
 """
 
 name    = "voice_to_program"
-version = "2015-08-27T0721Z"
+version = "2015-08-27T0810Z"
 
 import os
 import subprocess
@@ -62,7 +62,6 @@ def main():
         "\nReady to stop Festival running...\n" +\
         "Press Enter to continue."
     )
-    #process_Festival.send_signal(9)
     os.killpg(os.getpgid(process_Festival.pid), 9)
     raw_input(
         "\nIn PulseAudio Volume Control, select the tab \"Recording\".\n" +\
